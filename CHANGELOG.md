@@ -1,0 +1,33 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.1.1] - 2025-12-06
+
+### Added
+- Project structure with `docs/` and `scripts/` folders
+- Setup script (`scripts/setup.sh`) for easy project initialization
+- Clean script (`scripts/clean.sh`) for removing caches
+- Comprehensive documentation in `docs/index.md`
+- Better README with emojis and clearer structure
+
+### Removed
+- GitHub Actions workflow (to avoid costs)
+
+### Changed
+- Improved `.gitignore` (added `.ruff_cache`)
+- Updated README with better Quick Start guide
+
+## [0.1.0] - 2025-12-06
+
+### Added
+- Initial project structure
+- Python packaging with `pyproject.toml`
+- Pre-commit hooks (black, isort, ruff)
+- VS Code configuration
+- MIT License
+- Basic test setup with pytest
+- GitHub repository integration
