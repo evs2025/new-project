@@ -1,6 +1,6 @@
 # new-project
 
-> Minimal Python project scaffold v0.1.2
+> Minimal Python project scaffold v0.1.3
 
 ## 📁 Projektstruktur
 

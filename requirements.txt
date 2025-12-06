@@ -1,9 +1,26 @@
+black==25.11.0
+cfgv==3.5.0
+click==8.3.1
+coverage==7.12.0
+distlib==0.4.0
+filelock==3.20.0
+identify==2.6.15
 iniconfig==2.3.0
-# Editable Git install with no remote (new-project==0.1.0)
--e /Users/bosko/Documents/Main/Projekte/play-dynamic/Apps/Bosko-Workspace/Project/new-project
+isort==7.0.0
+mypy_extensions==1.1.0
+-e git+https://github.com/evs2025/new-project.git@92e5201005ca3079d555e4274cfcd665bb871e2d#egg=new_project
+nodeenv==1.9.1
 packaging==25.0
+pathspec==0.12.1
+platformdirs==4.5.1
 pluggy==1.6.0
+pre_commit==4.5.0
 Pygments==2.19.2
 pytest==9.0.1
+pytest-cov==7.0.0
+pytokens==0.3.0
+PyYAML==6.0.3
+ruff==0.14.8
 setuptools==80.9.0
+virtualenv==20.35.4
 wheel==0.45.1
