@@ -1,0 +1,9 @@
+iniconfig==2.3.0
+# Editable Git install with no remote (new-project==0.1.0)
+-e /Users/bosko/Documents/Main/Projekte/play-dynamic/Apps/Bosko-Workspace/Project/new-project
+packaging==25.0
+pluggy==1.6.0
+Pygments==2.19.2
+pytest==9.0.1
+setuptools==80.9.0
+wheel==0.45.1
