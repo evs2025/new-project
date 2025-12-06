@@ -1,10 +1,10 @@
 """Tests for logger utility."""
 
 import logging
-from pathlib import Path
 import tempfile
+from pathlib import Path
 
-from src.utils.logger import setup_logging, get_logger
+from src.utils.logger import get_logger, setup_logging
 
 
 def test_get_logger():
@@ -26,14 +26,14 @@ def test_setup_logging_with_file():
     with tempfile.TemporaryDirectory() as tmpdir:
         log_file = Path(tmpdir) / "test.log"
         setup_logging(level="DEBUG", log_file=log_file)
-        
+
         logger = get_logger("test_file")
         logger.info("Test message")
-        
+
         # Flush handlers to ensure log is written
         for handler in logger.handlers:
             handler.flush()
-        
+
         assert log_file.exists()
         content = log_file.read_text()
         assert "Test message" in content or len(content) >= 0  # Log file created

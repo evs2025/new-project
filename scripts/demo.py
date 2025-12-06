@@ -11,7 +11,7 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.example import hello, add
+from src.example import add, hello
 
 
 def main():
@@ -20,14 +20,14 @@ def main():
     print("🚀 new-project Demo")
     print("=" * 50)
     print()
-    
+
     # Demo hello function
     print("📝 Testing hello() function:")
     print(f"   {hello()}")
     print(f"   {hello('Python')}")
     print(f"   {hello('Developer')}")
     print()
-    
+
     # Demo add function
     print("🔢 Testing add() function:")
     numbers = [(2, 3), (10, 20), (-5, 5), (0, 100)]
@@ -35,7 +35,7 @@ def main():
         result = add(a, b)
         print(f"   {a} + {b} = {result}")
     print()
-    
+
     print("=" * 50)
     print("✅ All demos completed successfully!")
     print("=" * 50)

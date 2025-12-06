@@ -49,20 +49,20 @@ lint:
 
 # Clean caches
 clean:
-\t@echo "🧹 Cleaning..."
-\t@./scripts/clean.sh
+	@echo "🧹 Cleaning..."
+	@./scripts/clean.sh
 
 # Generate coverage report
 coverage:
-\t@echo "📊 Generating coverage report..."
-\t@. .venv/bin/activate && pytest --cov=src --cov-report=html --cov-report=term
-\t@echo "✅ Coverage report: htmlcov/index.html"
+	@echo "📊 Generating coverage report..."
+	@. .venv/bin/activate && pytest --cov=src --cov-report=html --cov-report=term
+	@echo "✅ Coverage report: htmlcov/index.html"
 
 # Run all examples
 run-examples:
-\t@echo "🎬 Running examples..."
-\t@. .venv/bin/activate && python examples/basic_usage.py
-\t@echo ""
-\t@. .venv/bin/activate && python examples/with_config.py
-\t@echo ""
-\t@. .venv/bin/activate && python examples/cli_demo.py
+	@echo "🎬 Running examples..."
+	@. .venv/bin/activate && python examples/basic_usage.py
+	@echo ""
+	@. .venv/bin/activate && python examples/with_config.py
+	@echo ""
+	@. .venv/bin/activate && python examples/cli_demo.py

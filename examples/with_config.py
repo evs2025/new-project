@@ -2,8 +2,8 @@
 """Example using configuration management."""
 
 import sys
-from pathlib import Path
 import tempfile
+from pathlib import Path
 
 # Add parent to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -28,12 +28,12 @@ config = {
 # Save to JSON
 with tempfile.TemporaryDirectory() as tmpdir:
     config_path = Path(tmpdir) / "config.json"
-    
+
     print("1. Saving configuration to JSON...")
     save_config(config, config_path)
     print(f"   Saved to: {config_path}")
     print()
-    
+
     print("2. Loading configuration...")
     loaded_config = load_config(config_path)
     print(f"   App name: {loaded_config['app_name']}")

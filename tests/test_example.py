@@ -1,6 +1,6 @@
 """Tests for example module."""
 
-from src.example import hello, add
+from src.example import add, hello
 
 
 def test_example():
@@ -23,4 +23,3 @@ def test_add():
     assert add(2, 3) == 5
     assert add(-1, 1) == 0
     assert add(0, 0) == 0
-

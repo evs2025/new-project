@@ -13,7 +13,7 @@ def setup_logging(
 ) -> None:
     """
     Setup logging configuration.
-    
+
     Args:
         level: Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
         log_file: Optional file path to write logs to
@@ -21,13 +21,13 @@ def setup_logging(
     """
     if format_string is None:
         format_string = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    
+
     handlers = [logging.StreamHandler(sys.stdout)]
-    
+
     if log_file:
         log_file.parent.mkdir(parents=True, exist_ok=True)
         handlers.append(logging.FileHandler(log_file))
-    
+
     logging.basicConfig(
         level=getattr(logging, level.upper()),
         format=format_string,
@@ -38,10 +38,10 @@ def setup_logging(
 def get_logger(name: str) -> logging.Logger:
     """
     Get a logger instance.
-    
+
     Args:
         name: Logger name (usually __name__)
-        
+
     Returns:
         Configured logger instance
     """
