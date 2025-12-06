@@ -8,7 +8,7 @@ identify==2.6.15
 iniconfig==2.3.0
 isort==7.0.0
 mypy_extensions==1.1.0
--e git+https://github.com/evs2025/new-project.git@92e5201005ca3079d555e4274cfcd665bb871e2d#egg=new_project
+-e git+https://github.com/evs2025/new-project.git@88019e4dbbca7c4afcba4e17f926d987a2a76e07#egg=new_project
 nodeenv==1.9.1
 packaging==25.0
 pathspec==0.12.1

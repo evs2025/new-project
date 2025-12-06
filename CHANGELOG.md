@@ -5,6 +5,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.4] - 2025-12-06
+
+### Added
+- **CLI Module** (`src/cli/`): Command-line interface with argparse
+  - `hello` command with optional name parameter
+  - `add` command for adding two numbers
+  - Verbose flag for debugging output
+  - Entry point: `new-project` command installed globally
+- **Utils Module** (`src/utils/`):
+  - `logger.py`: Logging setup and logger factory with file/console support
+  - `config.py`: JSON/YAML config management with save/load functions
+- **Examples** (`examples/`): 3 working example scripts
+  - `basic_usage.py`: Demo of hello and add functions
+  - `with_config.py`: Config load/save demonstration
+  - `cli_demo.py`: CLI interface examples
+- **Comprehensive Tests** (`tests/`):
+  - `test_cli/test_main.py`: 6 tests for CLI interface
+  - `test_utils/test_logger.py`: 4 tests for logging setup
+  - `test_utils/test_config.py`: 4 tests for config management
+  - Total: 18 tests, 100% pass rate, 84% code coverage
+- **Documentation**:
+  - `docs/api.md`: Complete API reference with examples
+  - `docs/examples.md`: Usage patterns and best practices
+- **Configuration**:
+  - `.coveragerc`: Coverage configuration for pytest-cov
+  - Updated `Makefile` with `coverage` and `run-examples` targets
+
+### Changed
+- `pyproject.toml`: Bumped version to 0.1.4, added CLI entry point
+- `README.md`: Updated with new features, CLI usage, and examples
+- Test coverage improved from 71% to 84%
+- Project structure expanded from 2 to 8 source files
+
+### Improved
+- More modular code organization with utils and cli packages
+- Better separation of concerns (logging, config, CLI)
+- Executable examples for quick start
+- Enhanced test suite (4 → 18 tests)
+
 ## [0.1.3] - 2025-12-06
 
 ### Added

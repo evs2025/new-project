@@ -1,16 +1,18 @@
-.PHONY: help setup test clean demo format lint install
+.PHONY: help setup test clean demo format lint install coverage run-examples
 
 # Default target
 help:
-	@echo "🚀 new-project - Available commands:"
+	@echo "🚀 new-project v0.1.4 - Available commands:"
 	@echo ""
-	@echo "  make setup    - Setup project (venv + deps + hooks)"
-	@echo "  make install  - Install dependencies"
-	@echo "  make test     - Run tests with coverage"
-	@echo "  make demo     - Run demo script"
-	@echo "  make format   - Format code (black, isort)"
-	@echo "  make lint     - Lint code (ruff)"
-	@echo "  make clean    - Clean caches and build artifacts"
+	@echo "  make setup        - Setup project (venv + deps + hooks)"
+	@echo "  make install      - Install dependencies"
+	@echo "  make test         - Run tests with coverage"
+	@echo "  make coverage     - Generate coverage report"
+	@echo "  make demo         - Run demo script"
+	@echo "  make run-examples - Run all example scripts"
+	@echo "  make format       - Format code (black, isort)"
+	@echo "  make lint         - Lint code (ruff)"
+	@echo "  make clean        - Clean caches and build artifacts"
 	@echo ""
 
 # Setup project
@@ -47,5 +49,20 @@ lint:
 
 # Clean caches
 clean:
-	@echo "🧹 Cleaning..."
-	@./scripts/clean.sh
+\t@echo "🧹 Cleaning..."
+\t@./scripts/clean.sh
+
+# Generate coverage report
+coverage:
+\t@echo "📊 Generating coverage report..."
+\t@. .venv/bin/activate && pytest --cov=src --cov-report=html --cov-report=term
+\t@echo "✅ Coverage report: htmlcov/index.html"
+
+# Run all examples
+run-examples:
+\t@echo "🎬 Running examples..."
+\t@. .venv/bin/activate && python examples/basic_usage.py
+\t@echo ""
+\t@. .venv/bin/activate && python examples/with_config.py
+\t@echo ""
+\t@. .venv/bin/activate && python examples/cli_demo.py
