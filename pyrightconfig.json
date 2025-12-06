@@ -1,23 +1,27 @@
 {
   "include": [
     "src",
-    "tests",
-    "examples",
-    "scripts"
+    "tests"
   ],
   "exclude": [
     "**/__pycache__",
     "**/.pytest_cache",
     "**/.venv",
     "**/node_modules",
-    "**/.git"
+    "**/.git",
+    "examples",
+    "scripts"
   ],
   "venvPath": ".",
   "venv": ".venv",
-  "reportMissingImports": false,
+  "reportMissingImports": "none",
   "reportMissingTypeStubs": false,
-  "reportMissingModuleSource": false,
+  "reportMissingModuleSource": "none",
   "pythonVersion": "3.14",
   "pythonPlatform": "Darwin",
-  "typeCheckingMode": "basic"
+  "typeCheckingMode": "basic",
+  "stubPath": "",
+  "extraPaths": [
+    "src"
+  ]
 }
