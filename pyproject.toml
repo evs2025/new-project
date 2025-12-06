@@ -11,6 +11,7 @@ requires-python = ">=3.8"
 license = { text = "MIT" }
 dependencies = [
     "pytest",
+    "pytest-cov",
 ]
 
 [tool.setuptools.packages.find]
